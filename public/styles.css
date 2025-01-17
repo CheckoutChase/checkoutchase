@@ -138,10 +138,13 @@ footer {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Product card styles */
 .product-card img {
-    max-width: 100%;
-    border-radius: 5px;
-    margin-bottom: 15px;
+    width: 200px; /* Set a consistent width */
+    height: 200px; /* Set a consistent height */
+    object-fit: cover; /* Ensures images are cropped without distortion */
+    border-radius: 5px; /* Optional: Rounds the corners for a polished look */
+    margin-bottom: 15px; /* Space between image and text */
 }
 
 .product-card h2 {
