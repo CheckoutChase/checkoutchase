@@ -2,13 +2,13 @@
     {
       "name": "Laptop",
       "link": "https://amzn.to/your-affiliate-link",
-      "image": "https://path-to-laptop-image.jpg",
+      "image": "https://via.placeholder.com/200",
       "price": "$999.99"
     },
     {
       "name": "Headphones",
       "link": "https://amzn.to/your-affiliate-link",
-      "image": "https://path-to-headphones-image.jpg",
+      "image": "https://via.placeholder.com/200",
       "price": "$199.99"
     }
-  ]
+]
