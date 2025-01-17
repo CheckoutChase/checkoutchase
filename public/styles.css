@@ -105,3 +105,8 @@ footer {
 .product-card a:hover {
     background: #005bb5;
 }
+
+.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
