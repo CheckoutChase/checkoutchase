@@ -3,12 +3,12 @@
     "name": "Laptop",
     "link": "https://amzn.to/laptop-link",
     "image": "https://via.placeholder.com/200",
-    "price": "$899.99" // Updated price
+    "price": "$899.99" 
   },
   {
     "name": "Headphones",
     "link": "https://amzn.to/headphones-link",
     "image": "https://via.placeholder.com/200",
-    "price": "$149.99" // Updated price
+    "price": "$149.99"
   }
 ]
