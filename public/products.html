@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products - Checkout Chase</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/vue@3"></script>
 </head>
 <body>
     <header>
@@ -19,12 +19,43 @@
         </nav>
     </header>
     <main>
-        <h1>Our Featured Products</h1>
-        <div id="product-grid" class="grid"></div>
+        <div id="app">
+            <h1>Our Featured Products</h1>
+            <div class="grid">
+                <!-- Vue.js will dynamically render product cards here -->
+                <div v-for="product in products" :key="product.name" class="product-card">
+                    <img :src="product.image" :alt="product.name" />
+                    <h2>{{ product.name }}</h2>
+                    <p>Price: {{ product.price }}</p>
+                    <a :href="product.link" target="_blank">Buy Now</a>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <p>&copy; 2025 Checkout Chase. All rights reserved.</p>
     </footer>
-    <script src="scripts.js"></script>
+    <script>
+        // Vue.js application
+        const app = Vue.createApp({
+            data() {
+                return {
+                    products: [] // Placeholder for product data
+                };
+            },
+            mounted() {
+                // Fetch product data from products.json
+                fetch('products.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        this.products = data; // Assign data to Vue's state
+                    })
+                    .catch(error => console.error('Error loading products:', error));
+            }
+        });
+
+        // Mount Vue app to the #app div
+        app.mount('#app');
+    </script>
 </body>
 </html>
