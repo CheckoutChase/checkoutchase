@@ -140,13 +140,15 @@ footer {
 
 /* Product card styles */
 .product-card img {
-    width: 200px; /* Set a consistent width */
-    height: 200px; /* Set a consistent height */
-    object-fit: contain; /* Ensure the entire image fits without being cropped */
-    background-color: #f9f9f9; /* Optional: Add a background color for empty spaces */
-    border-radius: 5px; /* Optional: Rounded corners */
-    margin-bottom: 15px; /* Space between image and text */
+    width: 200px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    object-fit: contain; /* Scale the image to fit inside the container */
+    background-color: #f9f9f9; /* Optional: Background for empty space */
+    border-radius: 5px; /* Rounded corners */
+    margin: 0 auto; /* Centers the image horizontally */
     display: block; /* Ensures proper alignment */
+    padding: 10px; /* Optional: Add padding for a balanced look */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
 }
 
 .product-card h2 {
