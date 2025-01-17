@@ -1,0 +1,14 @@
+[
+    {
+      "name": "Laptop",
+      "link": "https://amzn.to/your-affiliate-link",
+      "image": "https://path-to-laptop-image.jpg",
+      "price": "$999.99"
+    },
+    {
+      "name": "Headphones",
+      "link": "https://amzn.to/your-affiliate-link",
+      "image": "https://path-to-headphones-image.jpg",
+      "price": "$199.99"
+    }
+  ]
