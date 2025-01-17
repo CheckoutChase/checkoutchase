@@ -7,33 +7,90 @@ body, ul {
 
 /* Body styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     line-height: 1.6;
+    font-size: 16px;
     color: #333;
-    background-color: #f4f4f4;
-    padding: 0 20px;
+    background-color: #f9f9f9;
 }
 
 /* Header styles */
 header {
-    background: #333;
+    background: #0073e6;
     color: #fff;
-    padding: 10px 0;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header ul {
     list-style: none;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 header ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 0;
 }
 
 header ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+header ul li a:hover {
+    background: #005bb5;
+}
+
+header ul li a.active {
+    font-weight: bold;
+    text-decoration: underline;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Hero section */
+.hero {
+    background: linear-gradient(135deg, #0073e6, #005bb5);
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #fff;
+    color: #0073e6;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+}
+
+.cta-button:hover {
+    background: #005bb5;
+    color: #fff;
 }
 
 /* Main content */
@@ -44,15 +101,18 @@ main {
 
 /* Footer styles */
 footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #333;
+    background: #0073e6;
     color: #fff;
-    position: fixed;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
     bottom: 0;
     width: 100%;
 }
 
+/* Product grid */
 .grid {
     display: flex;
     flex-wrap: wrap;
@@ -61,51 +121,57 @@ footer {
     padding: 20px;
 }
 
+/* Product cards */
 .product-card {
     border: 1px solid #ddd;
+    border-radius: 10px;
     padding: 15px;
     text-align: center;
     background: #fff;
-    border-radius: 8px;
-    width: 200px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 250px;
 }
 
 .product-card:hover {
     transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .product-card img {
     max-width: 100%;
     border-radius: 5px;
+    margin-bottom: 15px;
 }
 
 .product-card h2 {
-    font-size: 18px;
-    margin: 10px 0;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #0073e6;
 }
 
 .product-card p {
-    color: #555;
+    color: #666;
     font-size: 16px;
+    margin-bottom: 15px;
 }
 
 .product-card a {
     display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
+    padding: 10px 20px;
     background: #0073e6;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    transition: background 0.3s;
 }
 
 .product-card a:hover {
     background: #005bb5;
 }
 
+/* Utility styles */
 .active {
     font-weight: bold;
     text-decoration: underline;
